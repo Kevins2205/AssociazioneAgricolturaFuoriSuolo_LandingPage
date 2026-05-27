@@ -25,15 +25,13 @@ const Footer = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-5xl md:text-8xl font-black mb-12 leading-tight tracking-tighter"
+          viewport={{ once: false }}
+          className="text-5xl md:text-8xl font-black mb-12 leading-tight tracking-tighter h1-responsive"
         >
           UNIAMO COMPETENZE,<br />IMPRESE E ISTITUZIONI
         </motion.h2>
       </div>
 
-      <div className="h-24 md:h-32" aria-hidden="true" />
-      
       <div className="max-w-7xl mx-auto pt-16 border-t border-white/10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
           <div className="max-w-xs">
