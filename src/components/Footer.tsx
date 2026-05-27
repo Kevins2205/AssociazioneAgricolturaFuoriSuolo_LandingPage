@@ -28,7 +28,7 @@ const Footer = () => {
           viewport={{ once: true }}
           className="text-5xl md:text-8xl font-black mb-12 leading-tight tracking-tighter"
         >
-          UNIAMO COMPETENZE,<br />IMPRESE E ISTITUZIONI.
+          UNIAMO COMPETENZE,<br />IMPRESE E ISTITUZIONI
         </motion.h2>
       </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
             <p className="text-white/40 text-sm leading-relaxed">
               Associazione Agricoltura Fuori Suolo. <br />
-              Promuoviamo l&apos;innovazione sostenibile per il futuro dell&apos;agricoltura italiana.
+              Promuoviamo l&apos;innovazione sostenibile per il futuro dell&apos;agricoltura italiana
             </p>
           </div>
 

@@ -38,7 +38,7 @@ const Certification = () => {
           >
             Il Marchio di Qualità
           </motion.h2>
-          <p className="text-white/50 text-lg">Il sigillo dell&apos;innovazione sostenibile.</p>
+          <p className="text-white/50 text-lg">Il sigillo dell&apos;innovazione sostenibile</p>
         </div>
 
         <div className="relative w-full flex flex-col lg:flex-row items-center justify-center gap-20">

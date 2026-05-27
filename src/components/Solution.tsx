@@ -56,7 +56,7 @@ const Solution = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight"
           >
-            AAFS nasce per dare voce a un settore agricolo innovativo.
+            AAFS nasce per dare voce a un settore agricolo innovativo
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
