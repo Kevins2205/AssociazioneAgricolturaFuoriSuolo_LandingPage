@@ -52,7 +52,7 @@ const Problem = () => {
               viewport={{ once: true }}
               className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
             >
-              Un settore<br />senza<br />riconoscimento.
+              Un settore<br />senza<br />riconoscimento
             </motion.h2>
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
