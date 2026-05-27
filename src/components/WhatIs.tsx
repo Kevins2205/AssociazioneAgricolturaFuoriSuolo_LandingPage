@@ -39,17 +39,17 @@ const WhatIs = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold mb-6"
+          viewport={{ once: false }}
+          className="text-4xl md:text-6xl font-bold mb-6 h2-responsive"
         >
           Cos'è l'agricoltura<br />fuori suolo?
         </motion.h2>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ delay: 0.1 }}
-          className="text-xl text-white/50 max-w-2xl"
+          className="text-xl text-white/50 max-w-2xl responsive-lead"
         >
           Sistemi produttivi innovativi che cambiano le regole della produzione alimentare globale.
         </motion.p>
@@ -61,7 +61,7 @@ const WhatIs = () => {
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ delay: index * 0.1 }}
             className="group relative h-[400px] rounded-3xl overflow-hidden glass"
           >

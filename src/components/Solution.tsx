@@ -45,7 +45,7 @@ const Solution = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             className="inline-block px-4 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-bold uppercase tracking-widest mb-8"
           >
             La nostra missione
@@ -53,17 +53,17 @@ const Solution = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight"
+            viewport={{ once: false }}
+            className="text-4xl md:text-6xl font-bold mb-10 max-w-4xl mx-auto leading-tight h2-responsive"
           >
             AAFS nasce per dare voce a un settore agricolo innovativo
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ delay: 0.1 }}
-            className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed"
+            className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed responsive-lead"
           >
             Un’organizzazione senza scopo di lucro, creata per promuovere lo sviluppo. 
             Punto di riferimento nazionale per favorire il dialogo e contribuire alla crescita tecnica, 
@@ -77,7 +77,7 @@ const Solution = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: index * 0.2 }}
               className="flex flex-col items-center text-center p-8"
             >

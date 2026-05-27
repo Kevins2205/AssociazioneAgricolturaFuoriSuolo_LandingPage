@@ -29,8 +29,8 @@ const Team = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-bold mb-6"
+          viewport={{ once: false }}
+          className="text-4xl md:text-6xl font-bold mb-6 h2-responsive"
         >
           Gruppo Promotore
         </motion.h2>
@@ -43,7 +43,7 @@ const Team = () => {
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ delay: index * 0.1 }}
             className="flex flex-col items-center group"
           >

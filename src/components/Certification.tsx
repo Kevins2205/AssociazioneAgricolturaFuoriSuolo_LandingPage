@@ -33,8 +33,8 @@ const Certification = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold mb-6"
+            viewport={{ once: false }}
+            className="text-4xl md:text-6xl font-bold mb-6 h2-responsive"
           >
             Il Marchio di Qualità
           </motion.h2>
@@ -57,7 +57,7 @@ const Certification = () => {
               className="absolute inset-4 rounded-full border-2 border-dashed border-accent/30"
             />
             <div className="z-10 flex flex-col items-center">
-              <span className="text-accent font-black text-4xl md:text-6xl tracking-tighter not-italic">AAFS</span>
+              <span className="text-accent font-black text-4xl md:text-6xl tracking-tighter not-italic responsive-seal">AAFS</span>
               <span className="text-white/40 text-[10px] uppercase tracking-[0.3em] mt-2">Certified Innovation</span>
             </div>
           </motion.div>
@@ -69,7 +69,7 @@ const Certification = () => {
                 key={index}
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: index * 0.2 }}
                 className="flex items-center gap-6 p-6 rounded-2xl glass hover:bg-accent/5 transition-colors group"
               >

@@ -49,15 +49,15 @@ const Problem = () => {
             <motion.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
+              viewport={{ once: false }}
+              className="text-5xl md:text-7xl font-bold mb-8 leading-tight h1-responsive"
             >
               Un settore<br />senza<br />riconoscimento
             </motion.h2>
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: 0.1 }}
               className="text-xl text-white/50 mb-12 max-w-md"
             >
@@ -103,7 +103,7 @@ const Problem = () => {
               key={index}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: false, margin: "-100px" }}
               className="p-10 rounded-3xl glass hover:border-accent/30 transition-colors"
             >
               <problem.icon className="text-accent w-10 h-10 mb-6" />

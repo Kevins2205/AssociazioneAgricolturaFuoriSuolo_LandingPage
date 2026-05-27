@@ -19,22 +19,22 @@ const Hero = () => {
     <section ref={containerRef} className="relative h-[120vh] flex flex-col items-center justify-center overflow-hidden">
       <motion.div 
         style={{ scale, opacity, y }}
-        className="relative z-10 text-center px-4"
+        className="relative z-10 text-center px-4 max-w-[90vw] md:max-w-4xl mx-auto"
       >
         <motion.h1 
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-6 text-gradient"
+          className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-6 text-gradient h1-responsive"
         >
-          CERTIFICHIAMO<br />INNOVAZIONE
+          CERTIFICHIAMO{"\u00A0"} <br />INNOVAZIONE
         </motion.h1>
         
         <motion.p 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="text-accent text-xl md:text-2xl font-bold tracking-widest uppercase"
+          className="text-accent text-xl md:text-2xl font-bold tracking-widest uppercase responsive-lead"
         >
           AAFS - Associazione Agricoltura Fuori Suolo
         </motion.p>
