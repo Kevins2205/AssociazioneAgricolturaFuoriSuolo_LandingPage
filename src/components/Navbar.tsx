@@ -1,77 +1,18 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Leaf, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const navRef = useRef<HTMLElement | null>(null);
 
   const closeMenu = () => setMenuOpen(false);
-
-  const handleNavigate = (hash: string, e?: React.MouseEvent) => {
-    if (e) e.preventDefault();
-    setMenuOpen(false);
-    const el = document.querySelector(hash);
-    if (el) {
-      // delay to allow menu close animation to finish, then smooth-scroll with custom duration
-      const smoothScrollTo = (element: Element, duration = 800) => {
-        const start = window.scrollY || window.pageYOffset;
-        const rect = element.getBoundingClientRect();
-        const navbarHeight = navRef.current ? (navRef.current.offsetHeight || 0) : 0;
-        const target = rect.top + start - navbarHeight - 8; // small offset
-        const startTime = performance.now();
-
-        const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-        const step = (now: number) => {
-          const elapsed = now - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const eased = easeInOutCubic(progress);
-          window.scrollTo(0, Math.round(start + (target - start) * eased));
-          if (elapsed < duration) requestAnimationFrame(step);
-        };
-
-        requestAnimationFrame(step);
-      };
-
-      setTimeout(() => smoothScrollTo(el, 800), 220);
-    } else {
-      // fallback: change location
-      window.location.hash = hash;
-    }
-  };
-
-  useEffect(() => {
-    function handleClickOutside(e: MouseEvent | TouchEvent) {
-      if (!menuOpen) return;
-      const target = e.target as Node | null;
-      if (navRef.current && target && !navRef.current.contains(target)) {
-        setMenuOpen(false);
-      }
-    }
-
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === 'Escape') setMenuOpen(false);
-    }
-
-    document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleClickOutside);
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [menuOpen]);
 
   return (
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 mx-4 mt-4 rounded-3xl glass md:rounded-full md:max-w-7xl md:mx-auto"
     >
       <div className="flex items-center justify-between gap-3 px-4 py-3 sm:px-5 md:px-6 md:py-4">
@@ -109,10 +50,10 @@ const Navbar = () => {
             className="overflow-hidden border-t border-white/10 px-5 pb-5 md:hidden"
           >
             <div className="mt-4 grid gap-2 text-sm font-medium text-white/80">
-              <a href="#cosa-e" onClick={(e) => handleNavigate('#cosa-e', e)} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Cos&apos;è</a>
-              <a href="#problema" onClick={(e) => handleNavigate('#problema', e)} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Il Problema</a>
-              <a href="#soluzione" onClick={(e) => handleNavigate('#soluzione', e)} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Soluzione</a>
-              <a href="#certificazione" onClick={(e) => handleNavigate('#certificazione', e)} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Certificazione</a>
+              <a href="#cosa-e" onClick={closeMenu} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Cos&apos;è</a>
+              <a href="#problema" onClick={closeMenu} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Il Problema</a>
+              <a href="#soluzione" onClick={closeMenu} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Soluzione</a>
+              <a href="#certificazione" onClick={closeMenu} className="rounded-xl px-3 py-3 transition-colors hover:bg-white/5 hover:text-white">Certificazione</a>
             </div>
           </motion.div>
         )}
