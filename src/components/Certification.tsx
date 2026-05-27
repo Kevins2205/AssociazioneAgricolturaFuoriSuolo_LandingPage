@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -14,13 +14,6 @@ const points = [
 
 const Certification = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1.2, 0.8]);
 
   return (
     <section id="certificazione" ref={containerRef} className="relative py-32 px-6 overflow-hidden bg-gradient-to-b from-black to-[#051510]">
@@ -45,19 +38,26 @@ const Certification = () => {
           >
             Il Marchio di Qualità
           </motion.h2>
-          <p className="text-white/50 text-lg">Il sigillo dell'innovazione sostenibile.</p>
+          <p className="text-white/50 text-lg">Il sigillo dell&apos;innovazione sostenibile.</p>
         </div>
 
         <div className="relative w-full flex flex-col lg:flex-row items-center justify-center gap-20">
-          {/* Rotating Seal */}
+          {/* Static Seal */}
           <motion.div 
-            style={{ rotate, scale }}
             className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center"
           >
-            <div className="absolute inset-0 rounded-full border-[12px] border-accent/20 border-t-accent shadow-[0_0_50px_rgba(16,185,129,0.2)]" />
-            <div className="absolute inset-4 rounded-full border-2 border-dashed border-accent/30 animate-[spin_20s_linear_infinite]" />
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 28, ease: 'linear', repeat: Infinity }}
+              className="absolute inset-0 rounded-full border-[12px] border-accent/20 border-t-accent shadow-[0_0_50px_rgba(16,185,129,0.2)]"
+            />
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, ease: 'linear', repeat: Infinity }}
+              className="absolute inset-4 rounded-full border-2 border-dashed border-accent/30"
+            />
             <div className="z-10 flex flex-col items-center">
-              <span className="text-accent font-black text-4xl md:text-6xl tracking-tighter italic">AAFS</span>
+              <span className="text-accent font-black text-4xl md:text-6xl tracking-tighter not-italic">AAFS</span>
               <span className="text-white/40 text-[10px] uppercase tracking-[0.3em] mt-2">Certified Innovation</span>
             </div>
           </motion.div>

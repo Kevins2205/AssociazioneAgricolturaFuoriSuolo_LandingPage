@@ -7,7 +7,7 @@ import { Leaf, Mail, Link2, Globe } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="relative pt-32 pb-16 px-6 overflow-hidden">
+    <footer className="relative mt-12 pt-32 pb-16 px-6">
       {/* CTA Background Image */}
       <div className="absolute top-0 left-0 w-full h-[600px] z-0 overflow-hidden">
         <Image 
@@ -30,15 +30,10 @@ const Footer = () => {
         >
           UNIAMO COMPETENZE,<br />IMPRESE E ISTITUZIONI.
         </motion.h2>
-        <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-white text-black px-12 py-6 rounded-full text-xl font-bold hover:bg-accent hover:text-black transition-all shadow-[0_20px_40px_rgba(255,255,255,0.1)] hover:shadow-[0_20px_40px_rgba(16,185,129,0.3)]"
-        >
-          Diventa un punto di riferimento
-        </motion.button>
       </div>
 
+      <div className="h-24 md:h-32" aria-hidden="true" />
+      
       <div className="max-w-7xl mx-auto pt-16 border-t border-white/10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-16">
           <div className="max-w-xs">
@@ -47,7 +42,8 @@ const Footer = () => {
               <span className="font-bold text-2xl tracking-tight">AAFS</span>
             </div>
             <p className="text-white/40 text-sm leading-relaxed">
-              Associazione Agricoltura Fuori Suolo. Promuoviamo l'innovazione sostenibile per il futuro dell'agricoltura italiana.
+              Associazione Agricoltura Fuori Suolo. <br />
+              Promuoviamo l&apos;innovazione sostenibile per il futuro dell&apos;agricoltura italiana.
             </p>
           </div>
 
@@ -64,7 +60,7 @@ const Footer = () => {
               <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-white/40">Contatti</h4>
               <ul className="space-y-4 text-sm text-white/60">
                 <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> info@aafs.it</li>
-                <li>Via dell'Innovazione, 1</li>
+                <li>Via dell&apos;Innovazione, 1</li>
                 <li>Roma, Italia</li>
               </ul>
             </div>
@@ -80,10 +76,6 @@ const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/5 text-[10px] uppercase tracking-widest text-white/20">
           <p>© 2026 AAFS - Associazione Agricoltura Fuori Suolo. All rights reserved.</p>
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-          </div>
         </div>
       </div>
     </footer>
