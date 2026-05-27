@@ -34,7 +34,7 @@ const Team = () => {
         >
           Gruppo Promotore
         </motion.h2>
-        <p className="text-white/50 text-lg">Le menti dietro l'Associazione.</p>
+        <p className="text-white/50 text-lg">Le menti dietro l'Associazione</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
