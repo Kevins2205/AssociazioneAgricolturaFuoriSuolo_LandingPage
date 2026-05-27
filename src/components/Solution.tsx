@@ -65,9 +65,9 @@ const Solution = () => {
             transition={{ delay: 0.1 }}
             className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed"
           >
-            "Un’organizzazione senza scopo di lucro, creata per promuovere lo sviluppo. 
+            Un’organizzazione senza scopo di lucro, creata per promuovere lo sviluppo. 
             Punto di riferimento nazionale per favorire il dialogo e contribuire alla crescita tecnica, 
-            scientifica e normativa dell’agricoltura fuori suolo."
+            scientifica e normativa dell’agricoltura fuori suolo.
           </motion.p>
         </div>
 

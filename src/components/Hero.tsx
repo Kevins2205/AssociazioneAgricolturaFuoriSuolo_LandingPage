@@ -27,7 +27,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="text-6xl md:text-8xl lg:text-[10rem] font-black tracking-tighter leading-none mb-6 text-gradient"
         >
-          CERTIFICHIAMO<br />INNOVAZIONE.
+          CERTIFICHIAMO<br />INNOVAZIONE
         </motion.h1>
         
         <motion.p 
