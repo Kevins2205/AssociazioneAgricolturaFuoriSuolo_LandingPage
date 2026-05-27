@@ -13,7 +13,7 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-2">
         <Leaf className="text-accent w-6 h-6" />
-        <span className="font-bold text-xl tracking-tight">ASSOCIAZIONE AGRICOLTURA FUORI SUOLO</span>
+        <span className="font-bold text-xl tracking-tight">Associazione Agricoltura Fuori Suolo</span>
       </div>
       
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
